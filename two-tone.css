@@ -1,0 +1,33 @@
+/* Genome Vault V3: dark science museum, light Explorer expedition. */
+:root{--bg:#080f1e;--panel:#121d30;--panel2:#19273e;--text:#f0f5fd;--muted:#b3c5d8}
+.hero,.intro,.gateway,.research,.methods,.sources{background:linear-gradient(145deg,#0b1325,#101c31)!important;color:#edf5ff}
+.intro-card,.glass-card,.species-record,.research-panel,.research-sidebar,.method-card{background:#142239!important;color:#edf5ff!important;border-color:#30445f!important}
+.intro-card p,.research-panel p,.research-panel li,.method-card p,.species-record p{color:#c2d2e2!important}
+.intro-card h3,.research-panel h3,.research-panel h4,.method-card h3,.species-record h3{color:#f2f6ff!important}
+.intro-card .label{color:#77e7e2}.vault-context{padding:28px!important}.vault-context p{font-size:14px;line-height:1.9;margin:12px 0 18px}.vault-context ul{padding-left:21px;margin:0;line-height:1.8;color:#a9f0e7}.vault-context li{padding:3px 0}
+.research-panel .note,.source-notice,.method-limit{background:#1b2d46!important;color:#d8e4f0!important;border-color:#3b5675!important}.research-panel .key-points{background:#1a3248!important;color:#d8eef3!important}.research-chapter{border-color:#30445f!important}.original-research{border-color:#35516c!important}.original-research summary{color:#88e9e2!important}
+.archive-nav button{background:#182941!important;color:#c8e0ef!important;border-color:#34506a!important}.archive-nav button.active{background:#1d4555!important;color:#a2f5ed!important;border-color:#5fd6d0!important}
+.method-image,.wiki-photo{background:#213752!important}.method-copy .method-importance{color:#94eee1!important}.reference-list li{color:#c2d2e2!important}
+.mode-card{background:linear-gradient(135deg,#16243c,#20284a)!important;border-color:#3a5072!important}.mode-card h3,.mode-card p,.mode-num,.mode-link{color:#eef6ff!important}
+.topbar{background:#0b1425ed!important;border-color:#293b56!important}.topbar a,.topbar button,.brand{color:#eff6ff!important}
+footer{background:#080e1b!important;color:#d3e1ee!important;border-color:#293b56!important}
+/* The only light main section: Explorer Mode */
+#explorer{background:linear-gradient(145deg,#f8fbff 0%,#e7f6f8 47%,#f3edff 100%)!important;color:#17324c!important}
+#explorer h2,#explorer h3,#explorer h4,#explorer .section-head h2,#explorer .section-subhead h3{color:#1b3551!important}
+#explorer .section-head p,#explorer .section-subhead p,#explorer p{color:#4d637a!important}
+#explorer .section-kicker{color:#126d83!important}
+#explorer .story,#explorer .mission,#explorer .game-area{background:#ffffffee!important;border:1px solid #c5dce9!important;color:#193650!important;box-shadow:0 12px 35px #1b547014!important}
+#explorer .story p,#explorer .story span,#explorer .terminal,#explorer .mission p{color:#34536d!important}
+#explorer .expedition-card,#explorer .game-card,#explorer .evidence{background:#fff!important;border:1px solid #cddfea!important;color:#1b3551!important;box-shadow:0 10px 25px #31557912!important}
+#explorer .expedition-card p,#explorer .game-card p,#explorer .evidence p{color:#4f647b!important}
+#explorer .evidence-tiles div{background:#f1f8fc!important;color:#24455d!important;border-color:#cbdde9!important}
+#explorer .game-btns button,#explorer .tile-btn,#explorer .dpad button{background:#e8f4f8!important;color:#21465e!important;border:1px solid #a9cadb!important}
+#explorer .game-message{background:#e0f6ee!important;color:#155b4c!important}
+#explorer .btn.ghost{background:#fff!important;color:#145e78!important;border-color:#a8ced9!important}
+#explorer .wiki-photo{background:#e2f0f6!important;color:#31556e!important}
+/* Checkers: real playable capture game, progressively harder opposition */
+.checkers-board{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));width:min(100%,430px);aspect-ratio:1;border:5px solid #2c5e72;border-radius:12px;overflow:hidden;margin:15px auto;box-shadow:0 14px 32px #23465b28}
+.checker-cell{border:0;border-radius:0;display:grid;place-items:center;cursor:pointer;min-width:0;padding:0;position:relative}
+.checker-cell.light{background:#d9ebed}.checker-cell.dark{background:#7196a8}.checker-cell.selected{outline:4px solid #ffd06a;outline-offset:-4px}.checker-cell:focus-visible{outline:3px solid #ffc348;outline-offset:-3px}
+.checker-piece{display:block;width:72%;height:72%;border-radius:50%;border:3px solid #fff9;box-shadow:inset 0 -6px 0 #0002,0 3px 5px #0003}.checker-piece.player{background:#0eaaac}.checker-piece.ai{background:#7452b8}.checkers-level{text-align:center;color:#244c63;font-weight:800;font-size:13px;letter-spacing:.04em}
+@media(max-width:760px){.vault-context{padding:21px!important}.vault-context p{font-size:14px}.checkers-board{width:min(100%,340px)}}

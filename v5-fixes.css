@@ -1,0 +1,45 @@
+/* V5 focused fixes: no overflowing images; compact specimen cards; interactive case studies. */
+html,body{width:100%;max-width:100%;overflow-x:clip}
+.section{width:100%;max-width:min(1700px,100%);min-width:0}
+.section>*,.research-layout>*,.case-layout>*,.species-grid>*,.expedition-grid>*,.method-gallery>*{min-width:0;max-width:100%}
+.species-grid,.expedition-grid,.game-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.species-record.species-compact{display:flex;flex-direction:column;min-width:0;overflow:hidden;background:#142239!important;border:1px solid #34475d;border-radius:15px}
+.species-compact .species-visual{height:auto;aspect-ratio:4/3;width:100%;min-width:0;max-width:100%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#213752!important;font-size:64px}
+.species-compact .species-visual img,.expedition-card .animal img,.wiki-photo img,.case-thumb img{display:block;width:100%!important;max-width:100%!important;height:100%!important;object-fit:cover;object-position:center;min-width:0;min-height:0}
+.species-compact .species-info{padding:17px 18px 19px!important;display:flex;flex-direction:column;align-items:flex-start;gap:4px;flex:1;min-width:0}
+.species-compact .species-info h3{font-size:clamp(17px,1.5vw,21px);margin:3px 0 0;color:#fff!important}
+.species-compact .species-info em{font-size:12px;color:#a9c3d8;overflow-wrap:anywhere}
+.species-compact .species-info p{font-size:13px!important;line-height:1.55!important;color:#d4e1ec!important;margin:7px 0 10px!important;min-height:0!important}
+.species-compact .species-info button{margin-top:auto;color:#83f2e7!important;font-size:12px;font-weight:800;letter-spacing:.04em}
+/* Explorer image cards remain within the viewport, with text below images. */
+#explorer .expedition-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;width:100%;max-width:100%}
+#explorer .expedition-card{display:flex;flex-direction:column;min-width:0;max-width:100%;overflow:hidden;padding:0!important;border-radius:16px;text-align:left;box-sizing:border-box}
+#explorer .expedition-card .animal{display:flex;align-items:center;justify-content:center;width:100%;height:auto;aspect-ratio:4/3;max-width:100%;overflow:hidden;padding:0!important;background:#dbeaf2!important;font-size:60px;flex-shrink:0}
+#explorer .expedition-card .expedition-body{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:17px 18px 19px;min-width:0;flex:1;width:100%;box-sizing:border-box}
+#explorer .expedition-card .index{color:#187d91;font-size:10px}
+#explorer .expedition-card h3{font-size:clamp(17px,1.5vw,21px);margin:0;line-height:1.25;overflow-wrap:anywhere}
+#explorer .expedition-card p{font-size:13px;min-height:0;margin:0 0 7px;line-height:1.55}
+#explorer .expedition-card .status{margin-top:auto;color:#187b91;font-size:11px;font-weight:800}
+/* Click-to-reveal research cards with image thumbnails. */
+.case-layout{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.case-layout>.glass-card{min-width:0;padding:24px!important;border-radius:16px}
+.case-layout>.glass-card h3{font-size:clamp(19px,2vw,25px);margin:0 0 18px}
+.discovery-case{border:1px solid #344a64;border-radius:12px;margin:12px 0;overflow:hidden;background:#1a2b43;transition:border-color .2s}
+.discovery-case:hover,.discovery-case[open]{border-color:#5bc9d0}
+.discovery-case summary{list-style:none;display:flex;align-items:center;gap:13px;padding:11px;cursor:pointer;min-width:0}
+.discovery-case summary::-webkit-details-marker{display:none}
+.case-thumb{display:flex;align-items:center;justify-content:center;flex:0 0 84px;width:84px;height:70px;border-radius:8px;overflow:hidden;background:#304962;color:#80e2df;font-size:30px}
+.case-title{min-width:0;flex:1;display:flex;flex-direction:column;gap:5px}
+.case-title strong{font-size:14px;line-height:1.3;color:#f2f8ff;overflow-wrap:anywhere}
+.case-title small{font-size:11px;line-height:1.5;color:#a8c4d6}
+.case-chevron{font-size:22px;color:#7ee5df;flex-shrink:0;transition:transform .2s}
+.discovery-case[open] .case-chevron{transform:rotate(45deg)}
+.case-reveal{padding:0 17px 18px 108px;min-width:0}
+.case-reveal p{border:0!important;padding:0!important;margin:0 0 10px!important;color:#d4e1ed!important;font-size:13px!important;line-height:1.8!important;overflow-wrap:anywhere}
+.case-reveal .case-note{font-size:12px!important;color:#a8c6d4!important}
+.case-reveal a{color:#78e8e1;font-size:12px;font-weight:700}
+/* Keep context short, but scientific archives detailed. */
+.vault-context p{font-size:14px;line-height:1.8}
+@media(max-width:1150px){.species-grid,#explorer .expedition-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.section{padding:64px 20px}.case-layout{grid-template-columns:minmax(0,1fr)}.species-grid,#explorer .expedition-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.case-layout>.glass-card{padding:18px!important}}
+@media(max-width:520px){.species-grid,#explorer .expedition-grid{grid-template-columns:minmax(0,1fr)}.case-thumb{flex-basis:70px;width:70px;height:64px}.case-reveal{padding-left:14px}.expedition-head{flex-wrap:wrap}}

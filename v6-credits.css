@@ -1,0 +1,7 @@
+/* V6: first-screen course and creator credits; preserves the V5 two-tone design. */
+.hero-credits{margin:0 0 24px;max-width:620px;padding:18px 20px 17px;border:1px solid rgba(105,230,225,.31);border-left:3px solid #62e4df;border-radius:10px;background:linear-gradient(120deg,rgba(28,56,75,.8),rgba(35,30,64,.65));box-shadow:0 12px 40px rgba(0,0,0,.15)}
+.hero-credits-label{font-size:10px;font-weight:800;letter-spacing:.18em;color:#76ebe5;margin-bottom:9px}.credit-spark{margin-right:5px;color:#c5b4ff}
+.hero-credits-course{font-size:clamp(12px,1.2vw,15px);line-height:1.6;color:#eaf7ff;font-weight:600}.hero-credits-course strong{font-weight:800;color:#fff}.course-separator{color:#80a9b7;padding:0 5px}
+.hero-credits-team{display:flex;align-items:baseline;flex-wrap:wrap;gap:7px 12px;margin-top:10px}.team-caption{font-size:9px;font-weight:800;letter-spacing:.15em;color:#b8a9f9;white-space:nowrap}.team-names{font-size:12px;line-height:1.75;color:#e0eaf3;font-weight:600}.team-names i{font-style:normal;color:#71d8d4;margin:0 3px}
+.hero .hero-metrics{margin-top:0}.hero-copy{min-width:0}
+@media(max-width:760px){.hero-credits{padding:15px;margin-bottom:22px}.hero-credits-team{display:block}.team-caption{display:block;margin-bottom:4px}.hero-credits-course{font-size:12px}.team-names{font-size:11px}.hero{padding-top:48px}}
